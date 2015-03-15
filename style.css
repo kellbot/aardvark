@@ -1,0 +1,194 @@
+/*
+Theme Name: Aardvark
+Theme URI: http://www.kellbot.com
+Description: Aardvark WordPress theme
+Version: 1
+Author: Kelly Maguire
+Author URI: http://www.kellbot.com
+*/
+
+textarea {
+	max-width: 100%;
+}
+a {
+	color: #c7b342;
+}
+
+p {
+font-family: Cambria, Georgia, serif;
+}
+
+
+.wp-caption {
+	max-width: 100%;
+}
+
+
+#blog-menu  {
+	border: 0;
+	border-radius: 0;
+	box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.03);
+
+}
+
+
+#blog-menu .navbar-collapse {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+#blog-menu a {
+	color: #fff;
+}
+@media (min-width: 768px) {
+	#blog-menu .nav-justified > li {
+		width: 12.5%;
+	}
+	.post, .page {
+		margin-left: 0;
+	}
+	#main-column {
+		padding-left: 0;
+		padding-right: 0;
+}
+
+}
+@media (max-width: 768px) { 
+	.navbar-collapse {
+		background: #A0CABA;
+	}
+}
+.navbar-brand, .navbar-nav>li>a {
+	text-shadow: 0 0 0;
+}
+
+.nav>li>a:hover {
+	background-color: #9eb840;
+}
+
+.nav>li:nth-child(5n+4) {
+	background-color: #6b5951; 
+}
+.nav>li:nth-child(5n+0) {
+	background-color: #d3f08b; 
+}
+
+.nav>li:nth-child(5n+1) {
+	background-color: #7bd486; 
+}
+.nav>li:nth-child(5n+2) {
+	background-color: #23bac2; 
+}
+.nav>li:nth-child(5n+3) {
+	background-color: #348285; 
+}
+.post {
+	margin-top: 30px;
+	padding-bottom: 10px;
+	background: #fff;
+	box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.03);
+		position: relative;
+}
+
+.post .thumbnail-area {
+	padding: 0;
+	margin-bottom: -10px;
+}
+.post img {
+	max-width: 100%;
+	height: auto;
+}
+
+.post .bigtitle {
+	padding-top: 15px;
+	text-align: center;
+}
+
+.post .content {
+	padding: 15px;
+	min-height: 100%;
+}
+
+.infobar {
+	height: 30px;
+	line-height: 30px;
+	background-color: #573A39; 
+	color: #fff;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+.navbar { margin-bottom: 0 }
+
+/* Sidebars */
+.left-sidebar-container {
+	background-color: #e7e7e7;
+}
+/* Images */
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.post img.alignleft {
+	margin-right: 5px;
+} 
+
+.post img.alignright {
+	margin-left: 5px;
+} 
+
+
+#pagination {
+	margin: 30px auto;
+	text-align: center;
+}
+#pagination .page-numbers:not(.dots) {
+	display: inline-block;
+	min-width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	padding: 0 5px;
+	color: #fff;
+	box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.03);
+}
+
+#pagination .page-numbers:not(.dots){
+	background-color: #7EBF85;
+}
+#pagination .page-numbers.current{
+	background-color: #59a387;
+}
+#pagination .prev,
+#pagination .next{
+	margin: 0 10px;
+}
+
+/* sidebar widgets */
+.widget:first-child {
+	margin-top: 30px;
+}
+.widget {
+	margin-top: 15px;
+	padding: 5px;
+	}
+.widget h2{
+	font-size: 20px;
+	text-align: center;
+	padding: 2px;
+}
+
+/* Comments */
+#commentform code {
+	white-space: normal;
+}
