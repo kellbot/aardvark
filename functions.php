@@ -54,31 +54,3 @@ add_action( 'customize_register', 'aardvark_customizations' );
 if ( ! isset( $content_width ) )
     $content_width = 850;
 
-/* Some OneAll custom stuff */
-if(function_exists('oa_social_login_do_api_request')){
-	function aardvark_is_friend(){
-		//only Kelly's token:
-		$connection_token = get_user_meta(2, 'oa_social_login_user_token', true);
-	//Read settings
-		$settings = get_option ('oa_social_login_settings');
-
-		//API Settings
-		$api_connection_handler = ((!empty ($settings ['api_connection_handler']) AND $settings ['api_connection_handler'] == 'fsockopen') ? 'fsockopen' : 'curl');
-		$api_connection_use_https = ((!isset ($settings ['api_connection_use_https']) OR $settings ['api_connection_use_https'] == '1') ? true : false);
-		$api_subdomain = (!empty ($settings ['api_subdomain']) ? trim ($settings ['api_subdomain']) : '');
-
-		//See: http://docs.oneall.com/api/resources/connections/read-connection-details/
-		$api_resource_url = ($api_connection_use_https ? 'https' : 'http') . '://' . $api_subdomain . '.api.oneall.com/users/' . $connection_token . '/contacts.json?disable_cache=true';
-
-
-			//API Credentials
-			$api_credentials = array ();
-			$api_credentials['api_key'] = (!empty ($settings ['api_key']) ? $settings ['api_key'] : '');
-			$api_credentials['api_secret'] = (!empty ($settings ['api_secret']) ? $settings ['api_secret'] : '');
-			var_dump($api_credentials);
-
-		$response = oa_social_login_do_api_request($api_connection_handler, $api_resource_url, $api_credentials );
-		var_dump($response);
-	}
-	//add_action('admin_notices', 'aardvark_is_friend');
-}
